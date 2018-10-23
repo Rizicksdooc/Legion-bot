@@ -9,8 +9,9 @@ bot = commands.Bot(command_prefix="!")
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name = 'Helping you. | !help'))
+    await bot.change_presence(game=discord.Game(name = 'Helping you. | !cmdhelp'))
     print("Bot is ONLINE.")
+
 
 
 #cool thing
@@ -28,7 +29,7 @@ async def ping(ctx):
 
 
 @bot.command(pass_context = True)
-async def help(ctx):
+async def cmdhelp(ctx):
     await bot.say("`Commands: !help - What you are using right now! | !ping - Cool little response  |!holo - Our training facility link |  !rally- Our rally center link`")
 
 bot.run("NTA0MzY2NTg5ODY1MzYxNDE5.DrEALA.gEWoWMU7qgiFmYW_uywOjJuVe80")
